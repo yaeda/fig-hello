@@ -1,0 +1,9 @@
+web:
+  build: .
+  command: python app.py
+  ports:
+    - "49160:5000"
+  links:
+    - redis
+redis:
+  image: orchardup/redis
